@@ -1,0 +1,10 @@
+OpenWeather API: 1a59833386b06e184dc780149c3571ea
+Air Quality API: 5cf3cb49-39d7-466a-b6de-1124103224e3
+News API: fa14a21428fd4d68a6ec2e63abb4ca6a
+Youtube API: AIzaSyCTW6fuXQKglPPuBCUZdbnuelhEJ1C9lhg
+https://gnews.io/dashboard
+
+https://api.airvisual.com/v2/cities?state=Punjab&country=India&key=5cf3cb49-39d7-466a-b6de-1124103224e3
+https://api.airvisual.com/v2/cities?state=Telangana&country=India&key=5cf3cb49-39d7-466a-b6de-1124103224e3
+https://api.airvisual.com/v2/cities?state=Andhra%20Pradesh&country=India&key=5cf3cb49-39d7-466a-b6de-1124103224e3
+https://api.airvisual.com/v2/cities?state=Karnataka&country=India&key=5cf3cb49-39d7-466a-b6de-1124103224e3
