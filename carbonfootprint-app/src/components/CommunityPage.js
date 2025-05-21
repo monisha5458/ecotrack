@@ -107,7 +107,7 @@ const CommunityPage = () => {
       // Fetch environmental news from NewsAPI
       const newsResponse = await axios.get('https://newsapi.org/v2/everything', {
         params: {
-          q: '(carbon footprint OR climate change OR environmental protection OR sustainability) AND (reduction OR initiative OR technology OR policy)',
+          q: '(environment OR carbon footprint OR climate change OR environmental protection OR sustainability) AND (reduction OR initiative OR technology OR policy)',
           language: 'en',
           sortBy: 'publishedAt',
           pageSize: 6,

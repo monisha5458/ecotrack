@@ -44,7 +44,7 @@ const CommentsPage = () => {
       });
       
       if (response.data) {
-        setPost(response.data);
+      setPost(response.data);
         
         // Process comments safely
         let processedComments = [];
@@ -320,7 +320,7 @@ const CommentsPage = () => {
                           </p>
                         </div>
                       </div>
-                    </li>
+                  </li>
                   )
                 )}
               </ul>

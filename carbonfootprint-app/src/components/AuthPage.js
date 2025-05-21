@@ -7,7 +7,7 @@ const citiesByCountry = {
   "India": [
     "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Chennai", 
     "Kolkata", "Pune", "Ahmedabad", "Jaipur", "Lucknow",
-    "Kanpur", "Nagpur", "Indore", "Thane", "Bhopal"
+    "Kanpur", "Nagpur", "Indore", "Thane", "Bhopal","KGF",
   ],
   "United States": [
     "New York", "Los Angeles", "Chicago", "Houston", "Phoenix",

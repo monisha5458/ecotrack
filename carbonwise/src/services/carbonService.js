@@ -59,7 +59,7 @@ export async function getLeaderBoard(city) {
         totalCarbon: { $first: '$carbonFootprint' }
       }
     },
-    { $sort: { totalCarbon: -1 } }
+    { $sort: { totalCarbon: 1 } }
   ]);
   return agg.map(a => ({
     userId: a._id,

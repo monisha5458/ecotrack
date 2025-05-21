@@ -300,8 +300,8 @@ const fetchFollowStats = useCallback(async () => {
                   
                   {post.image && (
                     <div className="mt-3 border rounded-lg overflow-hidden">
-                      <img
-                        src={post.image}
+                    <img
+                      src={post.image}
                         alt="Post content"
                         className="max-w-full h-auto object-contain max-h-96"
                         onError={(e) => {
@@ -320,7 +320,7 @@ const fetchFollowStats = useCallback(async () => {
                           margin: '0 auto', 
                           padding: '8px'
                         }}
-                      />
+                    />
                     </div>
                   )}
                   
@@ -331,14 +331,14 @@ const fetchFollowStats = useCallback(async () => {
                     <div className="flex space-x-3">
                       <span className="text-gray-600 text-sm flex items-center">
                         <span className="mr-1">❤️</span> {post.likes || 0}
-                      </span>
-                      <button
-                        onClick={() => handleDeletePost(post._id)}
+                    </span>
+                    <button
+                      onClick={() => handleDeletePost(post._id)}
                         className="text-red-500 hover:text-red-700 flex items-center"
-                      >
+                    >
                         <span className="mr-1">🗑️</span>
-                        Delete
-                      </button>
+                      Delete
+                    </button>
                     </div>
                   </div>
                 </div>

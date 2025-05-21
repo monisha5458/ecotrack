@@ -180,65 +180,65 @@ const Meetups = () => {
         {showCreateForm && (
           <div className="bg-white rounded-xl shadow-lg p-6 mb-8 transition-all border border-green-100">
             <h2 className="text-xl font-bold mb-4 text-green-800">Create New Meetup</h2>
-            <form onSubmit={handleCreateMeetup}>
+          <form onSubmit={handleCreateMeetup}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+              <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Theme</label>
-                  <input
-                    type="text"
-                    value={newMeetup.theme}
-                    onChange={(e) => setNewMeetup({...newMeetup, theme: e.target.value})}
+                <input
+                  type="text"
+                  value={newMeetup.theme}
+                  onChange={(e) => setNewMeetup({...newMeetup, theme: e.target.value})}
                     className="w-full rounded-lg border border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50 px-3 py-2"
-                    required
+                  required
                     placeholder="e.g. Beach Cleanup, Tree Planting"
-                  />
-                </div>
-                <div>
+                />
+              </div>
+              <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
-                  <input
-                    type="text"
-                    value={newMeetup.location}
-                    onChange={(e) => setNewMeetup({...newMeetup, location: e.target.value})}
+                <input
+                  type="text"
+                  value={newMeetup.location}
+                  onChange={(e) => setNewMeetup({...newMeetup, location: e.target.value})}
                     className="w-full rounded-lg border border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50 px-3 py-2"
-                    required
+                  required
                     placeholder="e.g. City Park, Community Center"
-                  />
-                </div>
-                <div>
+                />
+              </div>
+              <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Date & Time</label>
-                  <input
-                    type="datetime-local"
-                    value={newMeetup.date}
-                    onChange={(e) => setNewMeetup({...newMeetup, date: e.target.value})}
+                <input
+                  type="datetime-local"
+                  value={newMeetup.date}
+                  onChange={(e) => setNewMeetup({...newMeetup, date: e.target.value})}
                     className="w-full rounded-lg border border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50 px-3 py-2"
-                    required
-                  />
-                </div>
+                  required
+                />
+              </div>
                 <div className="flex items-center">
-                  <input
-                    type="checkbox"
+                <input
+                  type="checkbox"
                     id="isOnline"
-                    checked={newMeetup.isOnline}
-                    onChange={(e) => setNewMeetup({...newMeetup, isOnline: e.target.checked})}
+                  checked={newMeetup.isOnline}
+                  onChange={(e) => setNewMeetup({...newMeetup, isOnline: e.target.checked})}
                     className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
-                  />
+                />
                   <label htmlFor="isOnline" className="ml-2 block text-sm font-medium text-gray-700">
                     Online Meeting
                   </label>
-                </div>
-                {newMeetup.isOnline && (
-                  <div className="md:col-span-2">
+              </div>
+              {newMeetup.isOnline && (
+                <div className="md:col-span-2">
                     <label className="block text-sm font-medium text-gray-700 mb-1">Meeting Link</label>
-                    <input
-                      type="url"
-                      value={newMeetup.link}
-                      onChange={(e) => setNewMeetup({...newMeetup, link: e.target.value})}
+                  <input
+                    type="url"
+                    value={newMeetup.link}
+                    onChange={(e) => setNewMeetup({...newMeetup, link: e.target.value})}
                       className="w-full rounded-lg border border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50 px-3 py-2"
-                      required
+                    required
                       placeholder="e.g. https://zoom.us/j/123456789"
-                    />
-                  </div>
-                )}
+                  />
+                </div>
+              )}
                 <div className="md:col-span-2">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
                   <textarea
@@ -249,18 +249,18 @@ const Meetups = () => {
                     placeholder="Describe the meetup purpose and what participants should expect"
                   ></textarea>
                 </div>
-              </div>
+            </div>
               <div className="mt-6">
-                <button
-                  type="submit"
+              <button
+                type="submit"
                   className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors shadow-md flex items-center"
-                >
+              >
                   <span className="mr-2">✅</span>
-                  Create Meetup
-                </button>
-              </div>
-            </form>
-          </div>
+                Create Meetup
+              </button>
+            </div>
+          </form>
+        </div>
         )}
 
         {/* Meetups Grid */}
@@ -322,28 +322,28 @@ const Meetups = () => {
                     
                     <div className="flex items-center justify-between mt-4">
                       {meetup.isOnline && meetup.link && (
-                        <a
+                    <a
                           href={meetup.link.startsWith('http') ? meetup.link : `https://${meetup.link}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                      target="_blank"
+                      rel="noopener noreferrer"
                           className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md flex items-center"
-                        >
+                    >
                           <span className="mr-1">💻</span>
                           Join Online Meeting
-                        </a>
-                      )}
+                    </a>
+                  )}
                       
                       <div className="flex space-x-2 ml-auto">
-                        {meetup.createdBy === userId && (
-                          <button
-                            onClick={() => handleDeleteMeetup(meetup._id)}
+                  {meetup.createdBy === userId && (
+            <button
+              onClick={() => handleDeleteMeetup(meetup._id)}
                             className="text-red-500 hover:text-red-700 px-3 py-1 rounded-lg border border-red-500 hover:bg-red-50 transition-colors flex items-center"
-                          >
+            >
                             <span className="mr-1">🗑️</span>
-                            Delete
-                          </button>
-                        )}
-                        
+              Delete
+            </button>
+          )}
+                  
                         {/* Only show Join button for in-person meetings */}
                         {!meetup.isOnline && (
                           <button
